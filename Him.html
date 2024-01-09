@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> I love you my Prince</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #FFC0CB, #FF6961, #000000);
+      font-family: Georgia, serif;
+    }
+    #container {
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+    #title {
+      font-size: 40px;
+color: black
+    }
+    #reasons {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin-top: 20px;
+    }
+    .text-box {
+      background-color: silver;
+      padding: 50px;
+      border-radius: 10px;
+      margin-top: 10px;
+      position: relative;
+    }
+    #nextButton,
+    #beforeButton {
+      background-color:black;
+      color: white;
+      padding: 20px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    #kissingCharacters {
+     position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+      max-width: 265px;
+      max-height:265px;
+    }
+#kissesHim {
+     position: absolute;
+  bottom:0
+left:0
+      max-width: 265px;
+      max-height:265px;
+    }
+#BabyYou {
+     position: absolute;
+  bottom:0
+right:0
+      max-width: 265px;
+      max-height:265px;
+    }
+  </style>
+</head>
+<body>
+  <div id="reason-container">
+  <div id="container">
+    <div id="title">I love you my Prince</div>
+    <div id="reasons">
+      <div class="text-box" id="reason1">I would do anything for you, Prince, and I'd trust you with my life anytime.</div>
+      <!-- Add more text-box elements for additional reasons -->
+      <button id="beforeButton" onclick="showPreviousReason()">Before</button>
+      <button id="nextButton" onclick="showNextReason()">Next</button>
+    </div>
+  </div>
+  <img src="06a087b5121a88b13fcf320932b85cc5.jpg" id="kissingCharacters" alt="Kissing Characters">
+<img src="238143c6913c41e9f1c75259e15f4f89.jpg" id="kissesHim" alt="Kisses">
+
+  <script>
+    const reasons = [
+      "I would do anything for you, Prince, and I'd trust you with my life anytime.",
+      "I like it when you smile, but oh goodness, I love it when I'm the reason you smile.",
+      "You make me feel like I can do anything when you believe in me.",
+      "You are literally everything to me and I am truly blessed to be loved by someone as perfect as you.",
+      "If I was given a dollar for every time I thought about you, I’d have no money. Because baby you never left my mind.",
+"The way you look at me when you think I’m not looking at you but sweetheart my eyes are always on you<3" ,
+      "You make me laugh even when I don’t want to smile. " ,
+      "You are a form of magic and miracles in my life, congratulations you helped a depressed person to see the positive world again.(Hence, You became my life and world.) " ,
+      "Your smile, your glimpse always brightens up my day, even if its just for a moment ",
+      "You give the 'WORLDS BEST KISSHIES ",
+      "Watching you play sports is my most favorite hobby now, fr, I’m your biggest fan. ",
+      "I love you because you are my friend, my best friend, my lover, confidant, my hubby too<3 hihi ",
+      "Obviously, you are the most wonderful person I’ve ever met and I hope that one by one all of your dreams come true just as mine have with you by my side betu. " ,
+      " I love how you pray for me, even during angel time. I love yuu " ,
+      "I loveeeee how you love me unconditionally<3 ",
+         "I can be myself around you, you make me feel comfortable no matter what",
+   "I love being yours, and the feeling of you being mine.",
+   "I love love love holding hands with you. (I sometimes still get shy thinking about the first times we held hands)" ,"The way you look at me sometimes makes me feel like you can see right through my soul and unleash my inner true personality." ,
+"I love you because you are my soul mate chikuu" ,
+"Bitch you always look so handsome, gorgeous, cute, breath-takingly hot (why do always wanna take my breath away huhh??)" ,
+"Your hands. Yep your hands and the things they can do to me. I love you because of it too" ,
+"You have an amazinggggg sense of humour (sooo good that sometimes your mazak makes me cry) but most of the times you make me laugh so  muchh" ,
+"Goodness, the way your hushed I love you sounds on the phone. You always make me melt fr" ,
+"I love how you call me your moon like the actual moon in the sky is a fucking potatoe <3",
+"The way your hands feel in mine, like they were perfectly carved to be in my hands and to be over my body.",
+"The way we say jay shree ram every morning, you are the reason I have good starts to my days",
+"I love that you believe in me, more than I do in myself sometimes.",
+"I love how much you care about me" ,
+"Stop bitch! Someday I’m going to die a very much wanted death because of your cutenesss (help)",
+"You ALWAYS make me feel like the absolutely luckiest girll in the world",
+"I love your hair too, especially when you move your hands through them. Waiting for the chance to be able to move my finger through your hair." ,
+"I never feel judged by you, that’s the advantage of being bestfriends with you first" ,
+"I love how you remind me that you love me, appreciate me every damn day",
+"The way you call me your wifey, and wife material (I melt. Again)",
+"Tbh. I melt at any thing you do or say. That’s my problem but that’s cause I’m madly in love with you.",
+"I love it when you say Good night partner. It makes me feel like I’m more than a lover to you, I’m your companion too.." ,
+"The way you call me your Princess. LIKE YES, im YOUR princess. Say that again",
+"The way you react when I’m being insecure about my hair or something else stupid. ",
+"I love how you have the power to change my thoughts about something from negative to positive.",
+"I love being able to share my thoughts and feelings with yuuu",
+"You are the most caring person I know, or I’ll ever know.. ",
+"I love how passionate you are while playing cricket or any sports.",
+"I love you and I’ll support you in all of your dreams.",
+"I can’t imagine my life without you. Seriously. You’re in my present and our future",
+"You make my heart swell everytime I see your face or hear your laugh.",
+"Noone else makes me feel like the most special girl in the world like you do.",
+"Every single time I’m with you, I realize that life is so much better with you around.",
+"I love you more than I will ever be able to put into words",
+"Because of how much you want the best for me.",
+"I love you so much if I ever see a flaw in you, I’d say that my eyes are flawed. ",
+"Your perfect imperfections are what makes you perfect for me.",
+"Because no matter where life takes us, we’ll always have each otherforever." ,
+"You have taught me how to be a better girlfriend(/wifey)!" ,
+"I love how you say mt ronaaa." ,
+"No matter who walks into our life, we’ll never let anyone come between us because what we have is too special. " ,
+"Because no one else gives me butterflies like this, every single time you smile at me." ,	
+"Because no one else could ever do what you do or be who you are, so perfectly in every single way!" ,
+"This world is not nearly as beautiful if I don’t have you beside me lovee" ,
+"For being who you are because that’s just what it takes to make me feel this way about you.",
+"You are my heart!",
+"You make every day feel like a dream.(quite literally)",
+"We might have our differences, but I would never change that about you.",
+"You are my perfect match in every single way!" ,
+"I love the way your mind works because it’s just as unique as you are!",
+"I can’t imagine spending even a day without you by my side.",
+"Because you have taught me so many things about life.",
+"I love how you give me so many reasons to love you even more every single day.",
+"I love you for always trying to make me happy and cheer me up when I’m down and upset.",
+"No matter what happens, no one can take our love away. Never.",
+"I feel the most alive when I’m by your side!",
+"For putting up with all of my flaws!",
+"Every special moment we have spent together will be treasured forever in my heart.",
+"Because you value what I have to say",
+"The kiss, hand holding and the way you touch me, tells me that we were always meant for each other from the very start!",
+"Being with you feels like a dream. (The most beautiful dream)",
+"Because you make me feel comfortable and safe." ,
+"You are never too busy or tired to listen to my rants or problems, and I appreciate how much you care about me!",
+"Every single aspect of who you are as a person makes me fall deeper and deeper in love with you!" ,
+"Just being by your side gives me so much strength and courage!",
+"Because you make me feel special every day through the little things you do to show you care about me.",
+"Every time we’re apart, I feel like a piece of me is missing and can’t wait for us to be back together again!",
+"When we first met it felt like fate had brought us together, and now after all this time, I know that fate is our destiny!",
+"The way your fingertips feel on my skin, no one can replace that ever. ",
+"The way you look at me with those bright eyes of yours makes me feel like we could conquer the world together.",
+"The way we understand each other even without words",
+"I love you for seeing me as the best person in the world, however flawed.",
+"I love you for forgiving me time after time, no matter what stupid mistakes I’ve made or will make again.",
+"When life gets tough, just being by your side makes me feel strong enough to handle it all with ease.",
+"Just being next to you makes everything okay.",
+"I love you for never giving up on me. ",
+"For always smiling back at me when I smile at you.",
+"Because we can sit in silence together and things do not get uncomfortable or boring even when it is quiet and nothing is going on. (although thank god you started touching me in the van, we have better conversations with touch tbh)",
+"I love you because even though you are completely drop dead gorgeous on the outside, you are even more beautiful on the inside.",
+"I love how I never have to worry about anyone else, because you always say I’m the only one for you.",
+"I love that I can trust you with my whole heart.",
+"I love that no matter what kind of mood I’m in or how busy we both get, you always bring some passion back into my life.",
+"I love that I can be myself around you and just know that you’ll understand, accept me, and appreciate me for who I am.",
+"I love how much you have helped me improve my life. " ,
+"Your love is so kind and patient!","I love it when you call me your jaan (pighal gyi guyzz),",
+"For calling other girls behen.",
+"For instantly apologizing when you think you’ve messed up.",
+"For constantly reassuring me and reminding me that you love me and forever do so",
+"For dealing with me when I’m being annoying,",
+"For not being very angry when I make dumb mistakes, I’m sorryyy my love,",
+"For making me a better person and girlfriend",
+"For taking out time to read the paragraphs from my books which I give you even though you don’t like reading.",
+
+"Your love is so kind and patient!" , 
+"I love it when you call me your jaan (pighal gyi guyzz)",
+"For calling all the other girls behen" ,
+"For instantly apologizing when you think you’ve messed up" ,
+"For constantly reassuring me and reminding me that you love me and forever will do so",
+"For dealing with me when I’m being annoying",
+"For not being very angry when I make dumb mistakes, I’m sorryyy my love",
+"For making me a better person and girlfriend",
+"For taking out time to read the paragraphs from my books which I give you even though you don’t like reading.",
+"You alwaysss keep your promises.",
+"For always trying your best to express your feelings for me even though you don’t have much words.",
+"For giving me kisshies every single dayyy",
+"For opening up your emojis section and actually using cute emojis. I am very grateful. Without emojis, texts look DRY DRY",
+"For using laughing emojis in my dms even though my humour infront you is close to 0.",
+"This is NOT  a direct reason why I love you but reason why my humour dies infront of you. So basically when I talk to you, my brain is always preoccupied with thoughts of us kissing and all. How am I supposed to say something funny then????",
+"Because you WORKOUT. There, one of the most sexi-est things about you is that you fucking invest time in making yourself the better and best.",
+"Also, thanks and ily for looking away first during our eye contacts now a days. It makes me feel power and very much NOT shy and not like the past Pranaya who used to say uh-uh-aa-uh after every word because you made her SO SHY.",
+"For trying to remember things I tell you even though your memory card gets renewed every day. (Aww my poor baby..)",
+"When you say 'Suno naa' before saying that you love me. I melt. I melt into the 2nd state of matter.",
+"When you give me any fucking compliment even if its something as simple as pyari.",
+"For having so intense and sweet eye contacts with me.",
+"Because you are soo innocent (makes you more cute) sometimes. You are a saint fr. Like once when you said gandi baat h when I first told you to ask your gf for nudes. ",
+"For warding off unwanted guys from my dms and protecting me.",
+"I know this aint a reason but sing a song for me please darling. I love love love your voice plus you sing beautifully",
+"For believing that I am the direct consequence of all your 'acche karm' because what you believe in 100% right.",
+"When you speak in English. You some how choose such perfect combination of words and deliver them in such a powerful manner that it leaves me speechless every.fucking.time.",
+"For sending me cute reels, im very thankful for them. Makes me veryy happy especially when you send one in the morning, it makes me whole day good.",
+"For saying ajaaa, aja naa, knowing very well that I cant :< (I’m desperate)",
+"For being possessive and protective of me as per required",
+"For agreeing to make tea and cook Maggie for me. (nah baby dw we’ll do everything together)",
+"For somehow making my sleep schedule better. (When you r not online (which you usually aren’t at night) I simply sleep)",
+"You are a cure to all of my stress-related diseases.",
+"You heal me mentally, emotionally and physically.",
+"For flirting with me when we were friends..",
+"For eventually stopping calling me Behen because then would’nt have known if you want me or not.",
+"For finally admitting that you have a crush on Auriga! Proud of you!!",
+"For our late night talks (whenever you get time)",
+"I love you for being a religious god-loving man. ",
+"For giving me back rubs. (The light touch of your fingers and thumb on my back makes me wet)",
+"Someday I’ll turn crazy and you would have the blame. Because EXCUSE ME. How the FUCK you so PERFECT????",
+"For those soft moans when my bra slightly touched your hand for the first time. (The sound of the moan repeats in my mind again and again sometimes)",
+"Turning me on and then doing nothing about it (You make me so desperate and wanting more and more of you)",
+"Turning me on and then actually doing something about it. (You do sometimes) ",
+"Hello. Pranaya must be having a bad day, Prince :(. But! A nice dic- ahm I mean a picture of your lower or upper body without clothes will make her excited. Guaranteed. Good luck!",
+"Because that dick too belong to me. (insert heart emoji)",
+"For being sooo good and sexy,that I shamelessly tell you everything. ",
+"I lovee how while making a wish during angel time, you pray for me. ",
+"My cardiac health is so so not stable because of you. You cause disturbances in my heart, for example when you cheek kissed me, when you came closer to my neck and told you  love me etcetra etcetra. My heart was about burst out. ",
+"For starting the touching trend in the van. I loveee FREE heaven tours. (Babyy, I thought you were shyy?)",
+"Speaking of van, I love you for giving me sweet-as-honey cheek kisses in there.",
+"I LOVE how you slightly pinch my cheeks any chance you get in the van.",
+"Kyunki tum aasani se mujhe mana lete ho.",
+"I love you because you have visible hot veins. Don’t blame me they’re so attractive  that I basically told you that I’d be slut for you (that is I’d let you fuck me if you want) even when we were friends. ",
+"Because you lent me your black ink pen once which made my handwriting sooo fucking beautiful. Best pen ever fr. ",
+"Best penis ever fr. ",
+"For noticing small things about me like that one time when you told me how you just realized I have dimples on my right side.",
+"Speaking of dimples, YOU HAVE THEM. BABY BABY BABY YOU SO CUTE.  ",
+"I love your personalityyyy. It just attracts everybody",
+"I love how I think if we talk all NIGHT we wont ever run out of things to say (we’d say im bored and me too when we don’t have anymore topics)",
+"I love how MY BRAIN FORGETS HOW TO WORK WHEN IM IN FRONT OF YOU OR TALKING TO YOU. LIKE EXCUSE ME BRAIN, YOU LOVE HIM NOW AND DON’T WORK FOR ME ANYMORE???",
+"Pay the rent bitch. (Rent of living inside my head since the day I caught feelings for you)",
+"You really make me laugh like no one else can.",
+"I can understand and see your real you, your real personality and soul like no one else ever would.",
+"You are a good listener, and you always have the right words of encouragement for me whenever I need themm",
+"Because you said you’d throw me on the bed. Like okay, please do. Also, when? I’m waiting plus I’d love to be under that body of yours.",
+"Idk man, but when I stay together with you like under a single roof, you would have to watch meow reels with me. Andd, It’s a rule. ",
+"I love seeing you around with small kids. Its just so manly, cute and attractive.  ",
+"You are thoughtful and always remember to do the sweet little thingzz which will make me giggle and be shyy everytime I think about it",
+"I love your body scent. Like you might think that your body does not have any distinct smell but trust me everytime you pass by, a fresh wave of addicting scents of honey, spice and love fills in my lungs.",
+"You look uffff in black clothes. I love black and I look hot in them too. That literally means we are soulmates Prince. ",
+"You make me feel like I’m the center of your universe.",
+"I LOVE it when you speak in the local language of here. It sounds like you r rapping or something. But that accent, that voice? Ufff, keep talking baby I’ll listen to you forever.",
+"You make me feel like your Princess every fucking single day.",
+"I love when we’re together, it feels like nothing else matters in the world.",
+"I love to see how good you are whilst playing sports and in teams. I love the look of passion on your face.",
+"I love the way your touch warms my heart (more like makes my heart want to burst due to happiness) and makes me feel special thank you for making me feel so amazing!", 
+"You’re a natural leader. Like fr.", 
+"I love you because of the way that you look at me makes me feel so special that I still get butterflies (fuck butterflies- a whole damn zoo) in my stomach ",
+"You might not love things I love and I might not know about the things you love but I’ll always listen to you talking about them. Tell me anything, I’ll listen darling.  I love uu ",
+"Every time we’re apart, I feel like a piece of me is missing and can’t wait for us to be back together again! ",
+"Not only do we understand each other perfectly, but we always agree on the important things.",
+"I love you, well. You ARE my first and the LAST love. ",
+"I love that you loved this gift! (As you should because, I’m fucking writing 365 reasons and creating the code!! And it had been 2.5 hours staring at the screen. ALL FOR U)",
+"15th September is the official decided date for our yearly anniversary. Hope you read this before the date. It’s your luck! ",
+"I love that whenever we fight, you always come and make sure we make up.",
+"For helping me learn more about myself. (You are now threaded into my soul, without you..)",
+"For being strong enough to get through all of life’s toughest challenges. (THAT’S MY MAN, MWAH <3)",
+"I LOVE THAT YOU LOVE ME.",
+"YOU MAKE ALL OF MY DREAMS COME TRUEEE",
+"I'm tired of thinking about you but apparently nor my body neither my heart or brain is satisfied yet and they won't show any.fucking.mercy.",
+"I soo love to see how my body reacts when I think of you(inappropriately). My nipples hard, throbbing sensation in my vagina which gets instantly wet with cum. I be like to my body, You love him? Damn, me too",
+"What isn’t to love about you??? ",
+" ALSO, what isn’t to be HORNY about you??????",
+"I LOVE THAT I LOVE YOU. (Sorry baby, I’m so sleepy I can’t think of anything else, mwah though) ",
+"I love how cutely you sing in the van. Your voice is so pleasant and sweet, my mind becomes calm. ",
+"As you know, I relate your skin to honey and chocolate. And your personality is extra sweet. Can I take a bite?",
+"I never had dark dark chocolate but I think I’ll love yours. Can I try and lick it? ",
+"I know the few questions which I asked in this list aren’t reasons. But here: I love you because I know you will say yes to all the questions I asked before. ",
+"For always loving my insecurities. Especially my hair. I mean I used to dislike my hair, now I love them. But look man, liking my hair even before? ANOTHER REASON WHY I LOVE YOU.",
+"Your hands are like my father’s. And I feel so safe and secure because of that, like I’m a fucking princess to two people I love the most.", 
+"I love it when you play with my hair. That action alone is one of the most romantic thing",
+"When you said Priya would be our daughter’s name. OMG, OMG PERFECT",
+"You know I can never stay angry at you for more than 5 minutes. Ek baar baby bulaoge to mai pighal jati hu.",
+"And when I thought there is no way I can schedule myself the way my father wants me to I had a brilliant idea, to set your kisshies as a reward. Now I do EVERYTHING JUST TO GET KISSHIES",
+"Sir, you have the sweetest dimpled smile. I could spend forever just looking at you. ",
+"You, me and our beautiful future.",
+"You have the purest soul and a heart of gold, and I’ll always take care of it. ",
+"I’ll love you like your soulmate (which I am), care for you like mumma, do stupid things with you like your bestfriend (also which I am). It’s a promise and a guarantee. I love you ",
+
+
+      
+    ];
+
+    let currentReasonIndex = localStorage.getItem("currentReasonIndex") || 0;
+
+    function showNextReason() {
+      if (currentReasonIndex < reasons.length - 1) {
+        currentReasonIndex++;
+        updateReason();
+      }
+    }
+
+    function showPreviousReason() {
+      if (currentReasonIndex > 0) {
+        currentReasonIndex--;
+        updateReason();
+      }
+    }
+
+    function updateReason() {
+      const reasonElement = document.getElementById("reason1");
+      reasonElement.innerText = reasons[currentReasonIndex];
+      localStorage.setItem("currentReasonIndex", currentReasonIndex);
+    }
+
+    // Load last viewed reason on page load
+    window.onload = function () {
+      updateReason();
+    };
+  </script>
+</body>
+</html>
